@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <p id="person"></p>
+
+    <script>
+
+    function myFirstComponent(fn, ln, ag) {
+      this.firstName = fn;
+      this.lastName = ln;
+      this.age = ag;
+      this.write = function(){
+        return "My name is " + this.firstName + " " + this.lastName + " and I am " + this.age + " years old.";
+      }
+    }
+    var dood = new myFirstComponent("dood", "brodia", 35);
+
+    document.getElementById("person").innerHTML = dood.write();
+
+
+    </script>
+
+  </body>
+</html>
